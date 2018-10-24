@@ -25,6 +25,7 @@ public enum DriverType implements DriverSetup {
             FirefoxOptions options = new FirefoxOptions();
             options.merge(capabilities);
             options.setHeadless(HEADLESS);
+            System.getProperties().put("webdriver.gecko.driver", "src/test/resources/selenium_standalone_binaries/linux/marionette/64bit/geckodriver");
 
             return new FirefoxDriver(options);
         }

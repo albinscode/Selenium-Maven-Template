@@ -44,7 +44,6 @@
         <!--Dependency Versions-->
         <selenium.version>3.12.0</selenium.version>
         <assertj-core.version>3.10.0</assertj-core.version>
-        <testng.version>6.14.3</testng.version>
         <query.version>1.2.0</query.version>
         <!--Plugin Versions-->
         <driver-binary-downloader-maven-plugin.version>1.0.17</driver-binary-downloader-maven-plugin.version>
@@ -58,7 +57,7 @@
         <browser>firefox</browser>
         <threads>1</threads>
         <remote>false</remote>
-        <headless>true</headless>
+        <headless>false</headless>
         <seleniumGridURL/>
         <platform/>
         <browserVersion/>
@@ -78,12 +77,6 @@
             <groupId>org.seleniumhq.selenium</groupId>
             <artifactId>selenium-java</artifactId>
             <version>${selenium.version}</version>
-            <scope>test</scope>
-        </dependency>
-        <dependency>
-            <groupId>org.testng</groupId>
-            <artifactId>testng</artifactId>
-            <version>${testng.version}</version>
             <scope>test</scope>
         </dependency>
         <dependency>
@@ -135,13 +128,14 @@
                                 <mac>true</mac>
                             </operatingSystems>
                         </configuration>
+                                <!-- FIXME seems not working with selenium https://mvnrepository.com/artifact/com.lazerycode.selenium/driver-binary-downloader-maven-plugin 
                         <executions>
                             <execution>
                                 <goals>
-                                    <goal>selenium</goal>
+                                    <goal>test</goal>
                                 </goals>
                             </execution>
-                        </executions>
+                        </executions> -->
                     </plugin>
                     <plugin>
                         <groupId>org.apache.maven.plugins</groupId>
