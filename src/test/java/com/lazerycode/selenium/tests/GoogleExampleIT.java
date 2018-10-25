@@ -45,7 +45,6 @@ public class GoogleExampleIT extends DriverBase {
 
     @Test
     public void googleMilkExample() throws Exception {
-    	System.out.println("coucou biloute");
         // Create a new WebDriver instance
         // Notice that the remainder of the code relies on the interface,
         // not the implementation.
