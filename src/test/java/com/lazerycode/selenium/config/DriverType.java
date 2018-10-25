@@ -40,6 +40,8 @@ public enum DriverType implements DriverSetup {
             options.setHeadless(HEADLESS);
             options.addArguments("--no-default-browser-check");
             options.setExperimentalOption("prefs", chromePreferences);
+            // default google chrome for windows driver
+            System.getProperties().put("webdriver.chrome.driver", "src/test/resources/selenium_standalone_binaries/windows/googlechrome/64bit/chromedriver.exe");
 
             return new ChromeDriver(options);
         }
